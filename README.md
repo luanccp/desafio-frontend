@@ -1,41 +1,26 @@
 # Desafio - Software Engineer [Frontend]
-  Crie uma tela que contém um formulário de endereço onde o usuário
-  preenche o CEP e os dados são preenchidos usando a api do VIACEP. Ao submeter
-  o formulário, uma tela de sucesso deve ser exibida, caso seja preenchido
-  corretamente.
 
-  Seu formulário deverá conter os seguintes campos:
+  Utilizando a api [JSONPlaceholder](https://jsonplaceholder.typicode.com/), crie uma aplicação que liste todos os usuários. Ao clicar em um dos usuários, navegar até uma página com os posts deste usuário.
 
-  - CEP
-  - rua
-  - numero
-  - complemento
-  - bairro
-  - cidade
-  - estado
+  O layout é livre. Use sua criatividade e dê um visual bem bacana à sua aplicação! ;)
 
-  Todos os campos tem o preenchimento obrigatório, exceto o complemento. Ao preencher o campo CEP,
-  o endereço deve ser preenchido automaticamente pelo retorno da API do VIACEP.
-  Também deve informar ao usuário quando o CEP que ele digitou for inválido.
+  A api do JSONPlaceholder pode ser encontrada [aqui](https://jsonplaceholder.typicode.com/).
 
-  O layout é livre. Use sua criatividade e dê um visual bem bacana ao seu formulário! ;)
-
-  A api do VIACEP pode ser encontrada [aqui](https://viacep.com.br/).
-
-## Sugestões
+## Requerimentos
   - Desenvolva em ReactJS;
+  - Utilize um gerenciador de estado
   - Não utilize framework de CSS como Bootstrap, Materialize etc...
   - Documentação sobre como executar o projeto.
-
-## Desejável
   - Responsividade
-  - Validação nos campos obrigatórios com mensagem
+
+## Diferencial
+  - Não utilizar CRA (create react app)
+  - SSR (Server Side Rendering)
+  - Paginação
   - Projeto disponível online usando gh-pages, netlify ou outro.
 
 ## Submissão do teste
-  Faça um fork desse repositório e crie uma branch com seu nome (nome_sobrenome),
-  para que possamos identificar você. Desenvolva e, quando finalizar, basta abrir
-  um pull-request
+  Crie um repositório público e nos envie a URL. (Github, Gitlab... etc)
 
 ## Quais tecnologias, ferramentas e linguagens são utilizadas na Lendico?
   Para o frontend utilizamos ReactJS, Redux, Redux Sagas, Styled-components
@@ -49,6 +34,6 @@
   - No dress code
   - Assistência odontológica;
   - Assistência médica;
-  - Frutas frescas toda segunda-feira;
+  - Frutas frescas todos os dias;
   - Máquina de café expresso, com leite, chocolate e cappuccino;
   - Parceria com o SESC.
