@@ -9,6 +9,7 @@
 ## Requerimentos
   - Desenvolva em ReactJS;
   - Utilize um gerenciador de estado
+  - Testes unitários
   - Não utilize framework de CSS como Bootstrap, Materialize etc...
   - Documentação sobre como executar o projeto.
   - Responsividade
