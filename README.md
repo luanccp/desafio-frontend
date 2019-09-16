@@ -51,6 +51,12 @@ Nesse desafio iremos utilizar a <a href="https://developer.github.com/v3/" targe
 - Não utilizar `react-create-app`
 - Projeto disponível online usando `firebase`, `gh-pages`, `netlify` ou outro.
 
+## Plus
+
+- Design System
+- Atomic Design
+- Redux Saga
+
 ## O que será avaliado
 
 - Estrutura do projeto
