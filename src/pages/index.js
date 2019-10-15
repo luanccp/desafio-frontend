@@ -1,21 +1,62 @@
-import React from "react"
+import React, { useState, useEffect } from "react"
 import { Link } from "gatsby"
 
 import Layout from "../components/layout"
-import Image from "../components/image"
-import SEO from "../components/seo"
 
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link>
-  </Layout>
-)
+import api from "../services/api"
+import Input from "../components/Input";
+import Content from "../components/Content";
 
+const IndexPage = () => {
+  
+  const[username, setUsername] = useState('')
+  const[repositories, setRepositories] = useState([])
+
+
+  useEffect(() => {
+    async function fetch() {
+      try {
+        const data  = await api.getRepositories('luanccp')
+        setRepositories(data)
+      } catch (error) {
+        console.log(error)
+      }
+    }
+    fetch()
+  }, [])
+
+  useEffect(() => {
+    async function fetch() {
+      try {
+        const data  = await api.getRepositories(username)
+        setRepositories(data)
+      } catch (error) {
+        console.log(error)
+      }
+    }
+    fetch()
+  }, [username])
+
+
+  
+
+  const handleUsername = event => {
+    setUsername(event.target.value)
+  }
+
+  return (
+    <Layout>
+      <Input onChange={handleUsername} placeholder="Digite seu username"/>
+      <Content>
+        <ul>
+          {repositories.map(repo => (
+            <li key={repo.id}>
+              {repo.name}
+            </li>
+          ))}
+        </ul>
+      </Content>
+    </Layout>
+  )
+}
 export default IndexPage
