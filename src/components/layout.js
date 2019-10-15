@@ -11,6 +11,7 @@ import * as themes from '../styles'
 import Header from "./header"
 import "./layout.css"
 import { LendicoTheme } from "../styles";
+import Footer from "./Footer";
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -38,11 +39,7 @@ const Layout = ({ children }) => {
         >
           <main>{children}</main>
         </div>
-        <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </footer>
+        <Footer />
       </>
     </ThemeProvider>
   )
