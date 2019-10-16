@@ -5,6 +5,8 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 
 import api from "../services/api"
+import BranchCard from "../components/BranchCard";
+import CommitCard from "../components/CommitCard";
 
 const RepositoryPage = ({ location }) => {
   const [branch, setBranchs] = useState([])
@@ -30,10 +32,10 @@ const RepositoryPage = ({ location }) => {
     <Layout>
       <h1>{(((location || {}).state || {}).repo || {}).name}</h1>
       {branch.map(b => (
-        <h2 key={b.id}>{b.name}</h2>
+        <BranchCard key={b.id}>{b.name}</BranchCard>
       ))}
       {commit.map(c => (
-        <p key={c.id}>{c.sha}</p>
+        <CommitCard key={c.id}>{c.sha}</CommitCard>
       ))}
       <Link to="/">Go back to the homepage</Link>
     </Layout>
