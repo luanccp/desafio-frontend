@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react"
 import { Link } from "gatsby"
 
 import Layout from "../components/layout"
-import SEO from "../components/seo"
 
 import api from "../services/api"
 import BranchCard from "../components/BranchCard";
@@ -28,6 +27,7 @@ const RepositoryPage = ({ location }) => {
 
     fetch()
   }, [])
+  
   return (
     <Layout>
       <h1>{(((location || {}).state || {}).repo || {}).name}</h1>
