@@ -37,21 +37,20 @@ const IndexPage = () => {
     fetch()
   }, [username])
 
-
-  
-
   const handleUsername = event => {
     setUsername(event.target.value)
   }
 
   return (
     <Layout>
-      <Input onChange={handleUsername} placeholder="Digite seu username"/>
+      <Input onChange={handleUsername} placeholder="Digite seu username" />
       <Content>
         <ul>
           {repositories.map(repo => (
             <li key={repo.id}>
-              {repo.name}
+              <Link key={repo.name} to="/repository" state={{ repo }}>
+                {repo.name}
+              </Link>
             </li>
           ))}
         </ul>
